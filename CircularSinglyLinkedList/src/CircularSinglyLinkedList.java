@@ -4,10 +4,16 @@ public class CircularSinglyLinkedList {
 	private ListNode last;
 	private int length;
 	
+	/*
+	 * Create an inner class
+	 */
 	private class ListNode {
 		private ListNode next;
 		private int data;
 		
+		/*
+		 * parameterized constructor 
+		 */
 		public ListNode(int data) {
 			this.data = data;
 		}
@@ -18,15 +24,24 @@ public class CircularSinglyLinkedList {
 		length = 0;
 	}
 	
+	/*
+	 * get the length of list
+	 */
 	public int length() {
 		return length;
 		
 	}
 	
+	/*
+	 * Check if list is empty
+	 */
 	public boolean isEmpty() {
 		return length==0;
 	}
 	
+	/*
+	 * logic for Creating a circular linked list
+	 */
 	public void createCircularLL() {
 		ListNode l1 = new ListNode(10);
 		ListNode l2 = new ListNode(15);
@@ -41,6 +56,9 @@ public class CircularSinglyLinkedList {
 		last = l4;
 	}
 	
+	/*
+	 * Trverse throgh the linkedList
+	 */
 	public void traverseList() {
 		if(last==null) 
 			return;
@@ -52,6 +70,9 @@ public class CircularSinglyLinkedList {
 		System.out.println(first.data);
 	}
 	
+	/*
+	 * Inserting an element at the start of a list
+	 */
 	public void insertElementAtbeginning() {
 		
 		ListNode futureFirst = new ListNode(5);
@@ -67,6 +88,9 @@ public class CircularSinglyLinkedList {
 		
 	}
 	
+	/*
+	 * Starting point of a program
+	 */
 	public static void main(String[] args) {
 		CircularSinglyLinkedList cLinkList = new CircularSinglyLinkedList();
 		cLinkList.createCircularLL();
